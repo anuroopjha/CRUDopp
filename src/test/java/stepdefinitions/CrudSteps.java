@@ -6,12 +6,21 @@ import static org.hamcrest.Matchers.equalTo;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import pojo.User;
 import utils.ApiUtils;
 import utils.ConfigReader;
 
+//@Description("Validate the user creation API endpoint.")
+@Severity(SeverityLevel.CRITICAL)
+@Epic("User Management")
+@Feature("User CRUD Operations")
 public class CrudSteps {
     private Response response;
     private User user;

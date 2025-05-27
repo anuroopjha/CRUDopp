@@ -1,0 +1,8 @@
+<extentreports>
+  <configuration>
+    <reportName>API Automation Report</reportName>
+    <theme>standard</theme>
+    <encoding>utf-8</encoding>
+    <protocol>https</protocol>
+  </configuration>
+</extentreports>

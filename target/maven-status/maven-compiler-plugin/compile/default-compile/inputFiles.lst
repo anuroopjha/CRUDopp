@@ -1,8 +1,4 @@
-D:\WorkSpace\com.APIandUI\src\main\java\pages\LoginPage.java
-D:\WorkSpace\com.APIandUI\src\main\java\utils\ApiUtils.java
-D:\WorkSpace\com.APIandUI\src\main\java\pages\BasePage.java
-D:\WorkSpace\com.APIandUI\src\main\java\pojo\User.java
-D:\WorkSpace\com.APIandUI\src\main\java\utils\ExtentManager.java
-D:\WorkSpace\com.APIandUI\src\main\java\utils\ConfigReader.java
-D:\WorkSpace\com.APIandUI\src\main\java\utils\TestAAA.java
-D:\WorkSpace\com.APIandUI\src\main\java\utils\DriverManager.java
+D:\WorkSpace\com.CRUDopp\src\main\java\utils\ExtentManager.java
+D:\WorkSpace\com.CRUDopp\src\main\java\pojo\User.java
+D:\WorkSpace\com.CRUDopp\src\main\java\utils\ApiUtils.java
+D:\WorkSpace\com.CRUDopp\src\main\java\utils\ConfigReader.java

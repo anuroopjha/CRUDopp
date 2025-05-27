@@ -1,37 +1,29 @@
 package hooks;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utils.ExtentManager;
 
 public class Hooks {
 
-	private static ExtentReports extent = ExtentManager.getInstance();
-	private static ExtentTest test;
-
 	@Before
-	public void setUp(Scenario scenario) {
-		test = extent.createTest(scenario.getName());
-		test.log(Status.INFO, "Test Started: " + scenario.getName());
-	}
+    public void beforeScenario(Scenario scenario) {
+        ExtentManager.createTest(scenario.getName());
+    }
 
-	@After
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-			test.log(Status.FAIL, "Test Failed: " + scenario.getName());
-		} else {
-			test.log(Status.PASS, "Test Passed: " + scenario.getName());
-		}
+    @AfterStep
+    public void afterStep(Scenario scenario) {
+        if (scenario.isFailed()) {
+        	ExtentManager.getTest().fail("Step Failed");
+        } else {
+        	ExtentManager.getTest().pass("Step Passed");
+        }
+    }
 
-		extent.flush();
-	}
-
-	public static ExtentTest getTest() {
-		return test;
-	}
+    @After
+    public void afterScenario() {
+    	ExtentManager.getExtentReports().flush();
+    }
 }
