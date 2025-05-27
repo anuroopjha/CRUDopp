@@ -1,0 +1,4 @@
+stepdefinitions\CrudSteps.class
+stepdefinitions\LoginSteps.class
+testrunners\TestRunner.class
+hooks\Hooks.class
